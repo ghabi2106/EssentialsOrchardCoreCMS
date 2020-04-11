@@ -1,0 +1,956 @@
+2020-04-10 22:46:30.7122 Info Message Template Auto Format enabled
+2020-04-10 22:46:30.8079 Info Loading assembly: NLog.Web.AspNetCore
+2020-04-10 22:46:30.8079 Debug ScanAssembly('NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-04-10 22:46:30.8079 Info Loading assembly: OrchardCore.Logging.NLog
+2020-04-10 22:46:30.8079 Debug ScanAssembly('OrchardCore.Logging.NLog, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null')
+2020-04-10 22:46:30.8506 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:30.8506 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-10 22:46:30.8756 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-04-10 22:46:31.1418 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-04-10 22:46:31.1418 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.1418 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:31.1504 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.1504 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-10 22:46:31.1504 Trace  Scanning Property Culture '' System.Globalization
+2020-04-10 22:46:31.1599 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-10 22:46:31.1599 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-10 22:46:31.1599 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:31.1599 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:31.1599 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.1599 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-04-10 22:46:31.1599 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.1599 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-10 22:46:31.2181 Debug Setting 'FileTarget.name' to 'file'
+2020-04-10 22:46:31.2243 Debug Setting 'FileTarget.fileName' to '${var:configDir}/App_Data/logs/orchard-log-${shortdate}.log'
+2020-04-10 22:46:31.2243 Debug Setting 'VariableLayoutRenderer.Name' to 'configDir'
+2020-04-10 22:46:31.2243 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.2243 Trace Scanning VariableLayoutRenderer 'Layout Renderer: ${var}'
+2020-04-10 22:46:31.2243 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.2243 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-10 22:46:31.2243 Debug Setting 'FileTarget.layout' to '${longdate}|${orchard-tenant-name}|${aspnet-traceidentifier}|${event-properties:item=EventId.Id}|${logger}|${uppercase:${level}}|${message} ${exception:format=ToString,StackTrace}'
+2020-04-10 22:46:31.2243 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.2243 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-10 22:46:31.2243 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.2243 Trace Scanning TenantLayoutRenderer 'Layout Renderer: ${orchard-tenant-name}'
+2020-04-10 22:46:31.4229 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4229 Trace Scanning AspNetTraceIdentifierLayoutRenderer 'Layout Renderer: ${aspnet-traceidentifier}'
+2020-04-10 22:46:31.4265 Debug Setting 'EventPropertiesLayoutRenderer.item' to 'EventId.Id'
+2020-04-10 22:46:31.4265 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4265 Trace Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2020-04-10 22:46:31.4265 Trace  Scanning Property Culture '' System.Globalization
+2020-04-10 22:46:31.4265 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4265 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-04-10 22:46:31.4265 Debug Setting 'UppercaseLayoutRendererWrapper.Inner' to '${level}'
+2020-04-10 22:46:31.4265 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4265 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:31.4265 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4265 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-10 22:46:31.4265 Trace  Scanning Property Culture '' System.Globalization
+2020-04-10 22:46:31.4414 Trace  Scanning Property Inner ''${level}'' NLog.Layouts
+2020-04-10 22:46:31.4414 Trace  Scanning SimpleLayout ''${level}''
+2020-04-10 22:46:31.4414 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:31.4414 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:31.4414 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4414 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-10 22:46:31.4874 Debug Setting 'ExceptionLayoutRenderer.format' to 'ToString,StackTrace'
+2020-04-10 22:46:31.4881 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4881 Trace Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2020-04-10 22:46:31.4881 Trace  Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2020-04-10 22:46:31.4881 Info Adding target FileTarget(Name=file)
+2020-04-10 22:46:31.4881 Debug Registered target file: NLog.Targets.FileTarget
+2020-04-10 22:46:31.4881 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4881 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-10 22:46:31.4881 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-04-10 22:46:31.4881 Trace Wrapping LevelLayoutRenderer with UppercaseLayoutRendererWrapper
+2020-04-10 22:46:31.4881 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4881 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:31.4881 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4881 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-10 22:46:31.4881 Trace  Scanning Property Culture '' System.Globalization
+2020-04-10 22:46:31.4881 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-10 22:46:31.4881 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-10 22:46:31.4881 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:31.4881 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:31.4881 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4881 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-04-10 22:46:31.4881 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2020-04-10 22:46:31.4881 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-10 22:46:31.5170 Debug Setting 'ConsoleTarget.name' to 'console'
+2020-04-10 22:46:31.5170 Info Adding target ConsoleTarget(Name=console)
+2020-04-10 22:46:31.5170 Debug Registered target console: NLog.Targets.ConsoleTarget
+2020-04-10 22:46:31.5193 Trace ParseRulesElement
+2020-04-10 22:46:31.5482 Debug Unused target checking is started... Rule Count: 2, Target Count: 2
+2020-04-10 22:46:31.5614 Debug Unused target checking is completed. Total Rule Count: 2, Total Target Count: 2, Unused Target Count: 0
+2020-04-10 22:46:32.1476 Debug Watching path 'C:\Users\Ghabi\source\repos\EssentialsOrchardCoreCMS\OrchardCoreCMSWeb' filter 'NLog.config' for changes.
+2020-04-10 22:46:32.1476 Debug --- NLog configuration dump ---
+2020-04-10 22:46:32.1476 Debug Targets:
+2020-04-10 22:46:32.1476 Debug File Target[file]
+2020-04-10 22:46:32.1476 Debug Console Target[console]
+2020-04-10 22:46:32.1476 Debug Rules:
+2020-04-10 22:46:32.1476 Debug logNamePattern: (:All) levels: [ Warn Error Fatal ] appendTo: [ file ]
+2020-04-10 22:46:32.1476 Debug logNamePattern: (Microsoft.Hosting.Lifetime:Equals) levels: [ Info Warn Error Fatal ] appendTo: [ console ]
+2020-04-10 22:46:32.1476 Debug --- End of NLog configuration dump ---
+2020-04-10 22:46:32.1601 Trace FindReachableObject<System.Object>:
+2020-04-10 22:46:32.1601 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Warn Error Fatal ] appendTo: [ file ]'
+2020-04-10 22:46:32.1601 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-04-10 22:46:32.1601 Trace  Scanning FileTarget 'File Target[file]'
+2020-04-10 22:46:32.1601 Trace   Scanning Property FileName ''${var:configDir}/App_Data/logs/orchard-log-${shortdate}.log'' NLog.Layouts
+2020-04-10 22:46:32.1601 Trace   Scanning SimpleLayout ''${var:configDir}/App_Data/logs/orchard-log-${shortdate}.log''
+2020-04-10 22:46:32.1601 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.1601 Trace    Scanning VariableLayoutRenderer 'Layout Renderer: ${var}'
+2020-04-10 22:46:32.1601 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.1601 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-10 22:46:32.1601 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.1601 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2020-04-10 22:46:32.1601 Trace   Scanning Property Encoding 'System.Text.UTF8Encoding+UTF8EncodingSealed' System.Text
+2020-04-10 22:46:32.1601 Trace   Scanning Property Layout ''${longdate}|${orchard-tenant-name}|${aspnet-traceidentifier}|${event-properties:item=EventId.Id}|${logger}|${uppercase:${level}}|${message} ${exception:format=ToString,StackTrace}'' NLog.Layouts
+2020-04-10 22:46:32.1601 Trace   Scanning SimpleLayout ''${longdate}|${orchard-tenant-name}|${aspnet-traceidentifier}|${event-properties:item=EventId.Id}|${logger}|${uppercase:${level}}|${message} ${exception:format=ToString,StackTrace}''
+2020-04-10 22:46:32.1601 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.1601 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-10 22:46:32.1601 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.1601 Trace    Scanning TenantLayoutRenderer 'Layout Renderer: ${orchard-tenant-name}'
+2020-04-10 22:46:32.1601 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.1601 Trace    Scanning AspNetTraceIdentifierLayoutRenderer 'Layout Renderer: ${aspnet-traceidentifier}'
+2020-04-10 22:46:32.1601 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.1601 Trace    Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2020-04-10 22:46:32.1601 Trace     Scanning Property Culture '' System.Globalization
+2020-04-10 22:46:32.1601 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.1601 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-04-10 22:46:32.1601 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.1601 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-10 22:46:32.1601 Trace     Scanning Property Culture '' System.Globalization
+2020-04-10 22:46:32.1601 Trace     Scanning Property Inner ''${level}'' NLog.Layouts
+2020-04-10 22:46:32.1601 Trace     Scanning SimpleLayout ''${level}''
+2020-04-10 22:46:32.1756 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.1756 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:32.1756 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.1756 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-10 22:46:32.1756 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.1756 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2020-04-10 22:46:32.1756 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2020-04-10 22:46:32.1756 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-04-10 22:46:32.1756 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-04-10 22:46:32.1756 Trace Scanning LoggingRule 'logNamePattern: (Microsoft.Hosting.Lifetime:Equals) levels: [ Info Warn Error Fatal ] appendTo: [ console ]'
+2020-04-10 22:46:32.1756 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2020-04-10 22:46:32.1756 Trace  Scanning ConsoleTarget 'Console Target[console]'
+2020-04-10 22:46:32.2449 Trace   Scanning Property Encoding 'System.Text.OSEncoding' System.Text
+2020-04-10 22:46:32.2449 Trace   Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-04-10 22:46:32.2449 Trace   Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-04-10 22:46:32.2449 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.2449 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-10 22:46:32.2449 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.2449 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-10 22:46:32.2449 Trace     Scanning Property Culture '' System.Globalization
+2020-04-10 22:46:32.2449 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-10 22:46:32.2449 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-10 22:46:32.2449 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.2449 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:32.2449 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.2449 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-04-10 22:46:32.2449 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.2449 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-10 22:46:32.2449 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2020-04-10 22:46:32.2449 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2020-04-10 22:46:32.2543 Info Found 37 configuration items
+2020-04-10 22:46:32.2543 Trace Initializing Layout Renderer: ${message}
+2020-04-10 22:46:32.2543 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.2543 Trace Initializing Layout Renderer: ${logger}
+2020-04-10 22:46:32.2543 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.2543 Trace Initializing Layout Renderer: ${level}
+2020-04-10 22:46:32.2543 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2020-04-10 22:46:32.2543 Trace FindReachableObject<System.Object>:
+2020-04-10 22:46:32.2543 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-10 22:46:32.2543 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.2543 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:32.2687 Trace Initializing Layout Renderer: ${uppercase}
+2020-04-10 22:46:32.2687 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.2687 Trace Initializing Layout Renderer: ${longdate}
+2020-04-10 22:46:32.2687 Trace Initializing '${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-04-10 22:46:32.2687 Trace FindReachableObject<System.Object>:
+2020-04-10 22:46:32.2687 Trace Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-04-10 22:46:32.2687 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.2687 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-10 22:46:32.2687 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.2687 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-10 22:46:32.2687 Trace   Scanning Property Culture '' System.Globalization
+2020-04-10 22:46:32.2687 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2020-04-10 22:46:32.2687 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2020-04-10 22:46:32.2687 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.2687 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:32.2687 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.2687 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-04-10 22:46:32.2687 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.2687 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-10 22:46:32.2939 Trace Initializing Console Target[console]
+2020-04-10 22:46:32.2939 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-04-10 22:46:32.2939 Trace Scanning ConsoleTarget 'Console Target[console]'
+2020-04-10 22:46:32.2939 Trace  Scanning Property Encoding 'System.Text.OSEncoding' System.Text
+2020-04-10 22:46:32.2939 Trace  Scanning Property Layout ''${longdate}|${level:uppercase=true}|${logger}|${message}'' NLog.Layouts
+2020-04-10 22:46:32.2939 Trace  Scanning SimpleLayout ''${longdate}|${level:uppercase=true}|${logger}|${message}''
+2020-04-10 22:46:32.2939 Trace Console Target[console] has 1 layouts
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${exception}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${message}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${level}
+2020-04-10 22:46:32.3016 Trace Initializing '${level}'
+2020-04-10 22:46:32.3016 Trace FindReachableObject<System.Object>:
+2020-04-10 22:46:32.3016 Trace Scanning SimpleLayout ''${level}''
+2020-04-10 22:46:32.3016 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.3016 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${uppercase}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${logger}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${event-properties}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${aspnet-traceidentifier}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${orchard-tenant-name}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.3016 Trace Initializing Layout Renderer: ${longdate}
+2020-04-10 22:46:32.3016 Trace Initializing '${longdate}|${orchard-tenant-name}|${aspnet-traceidentifier}|${event-properties:item=EventId.Id}|${logger}|${uppercase:${level}}|${message} ${exception:format=ToString,StackTrace}'
+2020-04-10 22:46:32.3016 Trace FindReachableObject<System.Object>:
+2020-04-10 22:46:32.3016 Trace Scanning SimpleLayout ''${longdate}|${orchard-tenant-name}|${aspnet-traceidentifier}|${event-properties:item=EventId.Id}|${logger}|${uppercase:${level}}|${message} ${exception:format=ToString,StackTrace}''
+2020-04-10 22:46:32.3016 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.3016 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2020-04-10 22:46:32.3016 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.3016 Trace  Scanning TenantLayoutRenderer 'Layout Renderer: ${orchard-tenant-name}'
+2020-04-10 22:46:32.3016 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.3016 Trace  Scanning AspNetTraceIdentifierLayoutRenderer 'Layout Renderer: ${aspnet-traceidentifier}'
+2020-04-10 22:46:32.3016 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.3016 Trace  Scanning EventPropertiesLayoutRenderer 'Layout Renderer: ${event-properties}'
+2020-04-10 22:46:32.3157 Trace   Scanning Property Culture '' System.Globalization
+2020-04-10 22:46:32.3157 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.3157 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2020-04-10 22:46:32.3157 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.3157 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2020-04-10 22:46:32.3157 Trace   Scanning Property Culture '' System.Globalization
+2020-04-10 22:46:32.3157 Trace   Scanning Property Inner ''${level}'' NLog.Layouts
+2020-04-10 22:46:32.3157 Trace   Scanning SimpleLayout ''${level}''
+2020-04-10 22:46:32.3157 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.3157 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2020-04-10 22:46:32.3157 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.3157 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2020-04-10 22:46:32.3157 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.3157 Trace  Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2020-04-10 22:46:32.3157 Trace   Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic
+2020-04-10 22:46:32.3157 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.3157 Trace Initializing Layout Renderer: ${shortdate}
+2020-04-10 22:46:32.3157 Trace Initializing Layout Renderer: ${literal}
+2020-04-10 22:46:32.3157 Trace Initializing Layout Renderer: ${var}
+2020-04-10 22:46:32.3314 Trace Initializing '${var:configDir}/App_Data/logs/orchard-log-${shortdate}.log'
+2020-04-10 22:46:32.3314 Trace FindReachableObject<System.Object>:
+2020-04-10 22:46:32.3314 Trace Scanning SimpleLayout ''${var:configDir}/App_Data/logs/orchard-log-${shortdate}.log''
+2020-04-10 22:46:32.3314 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2020-04-10 22:46:32.3314 Trace  Scanning VariableLayoutRenderer 'Layout Renderer: ${var}'
+2020-04-10 22:46:32.3314 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.3314 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2020-04-10 22:46:32.3314 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2020-04-10 22:46:32.3314 Trace Initializing File Target[file]
+2020-04-10 22:46:32.3314 Trace FindReachableObject<NLog.Layouts.Layout>:
+2020-04-10 22:46:32.3314 Trace Scanning FileTarget 'File Target[file]'
+2020-04-10 22:46:32.3314 Trace  Scanning Property FileName ''${var:configDir}/App_Data/logs/orchard-log-${shortdate}.log'' NLog.Layouts
+2020-04-10 22:46:32.3314 Trace  Scanning SimpleLayout ''${var:configDir}/App_Data/logs/orchard-log-${shortdate}.log''
+2020-04-10 22:46:32.3314 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2020-04-10 22:46:32.3314 Trace  Scanning Property Encoding 'System.Text.UTF8Encoding+UTF8EncodingSealed' System.Text
+2020-04-10 22:46:32.3314 Trace  Scanning Property Layout ''${longdate}|${orchard-tenant-name}|${aspnet-traceidentifier}|${event-properties:item=EventId.Id}|${logger}|${uppercase:${level}}|${message} ${exception:format=ToString,StackTrace}'' NLog.Layouts
+2020-04-10 22:46:32.3474 Trace  Scanning SimpleLayout ''${longdate}|${orchard-tenant-name}|${aspnet-traceidentifier}|${event-properties:item=EventId.Id}|${logger}|${uppercase:${level}}|${message} ${exception:format=ToString,StackTrace}''
+2020-04-10 22:46:32.3474 Trace File Target[file] has 2 layouts
+2020-04-10 22:46:32.3474 Trace FileTarget(Name=file): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2020-04-10 22:46:41.3750 Debug ScanAssembly('NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-04-10 22:46:41.7459 Debug Hide assemblies for callsite
+2020-04-10 22:46:41.7459 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-04-10 22:46:42.0813 Debug Targets for Microsoft.Extensions.Hosting.Internal.ApplicationLifetime by level:
+2020-04-10 22:46:42.0819 Debug Trace =>
+2020-04-10 22:46:42.0819 Debug Debug =>
+2020-04-10 22:46:42.0819 Debug Info =>
+2020-04-10 22:46:42.0819 Debug Warn => file
+2020-04-10 22:46:42.0819 Debug Error => file
+2020-04-10 22:46:42.0819 Debug Fatal => file
+2020-04-10 22:46:42.1336 Debug Targets for Microsoft.Extensions.Hosting.Internal.Host by level:
+2020-04-10 22:46:42.1336 Debug Trace =>
+2020-04-10 22:46:42.1336 Debug Debug =>
+2020-04-10 22:46:42.1336 Debug Info =>
+2020-04-10 22:46:42.1336 Debug Warn => file
+2020-04-10 22:46:42.1336 Debug Error => file
+2020-04-10 22:46:42.1336 Debug Fatal => file
+2020-04-10 22:46:42.1447 Debug Targets for Microsoft.Hosting.Lifetime by level:
+2020-04-10 22:46:42.1447 Debug Trace =>
+2020-04-10 22:46:42.1447 Debug Debug =>
+2020-04-10 22:46:42.1447 Debug Info => console
+2020-04-10 22:46:42.1447 Debug Warn => file console
+2020-04-10 22:46:42.1447 Debug Error => file console
+2020-04-10 22:46:42.1447 Debug Fatal => file console
+2020-04-10 22:46:42.1447 Debug Targets for Microsoft.AspNetCore.DataProtection.TypeForwardingActivator by level:
+2020-04-10 22:46:42.1447 Debug Trace =>
+2020-04-10 22:46:42.1447 Debug Debug =>
+2020-04-10 22:46:42.1447 Debug Info =>
+2020-04-10 22:46:42.1447 Debug Warn => file
+2020-04-10 22:46:42.1447 Debug Error => file
+2020-04-10 22:46:42.1447 Debug Fatal => file
+2020-04-10 22:46:42.2117 Debug Targets for Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager by level:
+2020-04-10 22:46:42.2117 Debug Trace =>
+2020-04-10 22:46:42.2117 Debug Debug =>
+2020-04-10 22:46:42.2117 Debug Info =>
+2020-04-10 22:46:42.2117 Debug Warn => file
+2020-04-10 22:46:42.2117 Debug Error => file
+2020-04-10 22:46:42.2117 Debug Fatal => file
+2020-04-10 22:46:42.2117 Debug Targets for Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory by level:
+2020-04-10 22:46:42.2117 Debug Trace =>
+2020-04-10 22:46:42.2117 Debug Debug =>
+2020-04-10 22:46:42.2117 Debug Info =>
+2020-04-10 22:46:42.2117 Debug Warn => file
+2020-04-10 22:46:42.2117 Debug Error => file
+2020-04-10 22:46:42.2117 Debug Fatal => file
+2020-04-10 22:46:42.2117 Debug Targets for Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory by level:
+2020-04-10 22:46:42.2117 Debug Trace =>
+2020-04-10 22:46:42.2117 Debug Debug =>
+2020-04-10 22:46:42.2219 Debug Info =>
+2020-04-10 22:46:42.2219 Debug Warn => file
+2020-04-10 22:46:42.2219 Debug Error => file
+2020-04-10 22:46:42.2219 Debug Fatal => file
+2020-04-10 22:46:42.2219 Debug Targets for Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory by level:
+2020-04-10 22:46:42.2219 Debug Trace =>
+2020-04-10 22:46:42.2219 Debug Debug =>
+2020-04-10 22:46:42.2219 Debug Info =>
+2020-04-10 22:46:42.2219 Debug Warn => file
+2020-04-10 22:46:42.2219 Debug Error => file
+2020-04-10 22:46:42.2219 Debug Fatal => file
+2020-04-10 22:46:42.4427 Debug Targets for Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor by level:
+2020-04-10 22:46:42.4427 Debug Trace =>
+2020-04-10 22:46:42.4427 Debug Debug =>
+2020-04-10 22:46:42.4427 Debug Info =>
+2020-04-10 22:46:42.4427 Debug Warn => file
+2020-04-10 22:46:42.4427 Debug Error => file
+2020-04-10 22:46:42.4427 Debug Fatal => file
+2020-04-10 22:46:42.4427 Debug Targets for Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository by level:
+2020-04-10 22:46:42.4427 Debug Trace =>
+2020-04-10 22:46:42.4427 Debug Debug =>
+2020-04-10 22:46:42.4427 Debug Info =>
+2020-04-10 22:46:42.4427 Debug Warn => file
+2020-04-10 22:46:42.4427 Debug Error => file
+2020-04-10 22:46:42.4427 Debug Fatal => file
+2020-04-10 22:46:42.7700 Debug Targets for Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver by level:
+2020-04-10 22:46:42.7700 Debug Trace =>
+2020-04-10 22:46:42.7700 Debug Debug =>
+2020-04-10 22:46:42.7700 Debug Info =>
+2020-04-10 22:46:42.7700 Debug Warn => file
+2020-04-10 22:46:42.7700 Debug Error => file
+2020-04-10 22:46:42.7700 Debug Fatal => file
+2020-04-10 22:46:42.7700 Debug Targets for Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider by level:
+2020-04-10 22:46:42.7700 Debug Trace =>
+2020-04-10 22:46:42.7700 Debug Debug =>
+2020-04-10 22:46:42.7700 Debug Info =>
+2020-04-10 22:46:42.7700 Debug Warn => file
+2020-04-10 22:46:42.7700 Debug Error => file
+2020-04-10 22:46:42.7700 Debug Fatal => file
+2020-04-10 22:46:42.7700 Debug Targets for Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService by level:
+2020-04-10 22:46:42.7700 Debug Trace =>
+2020-04-10 22:46:42.7700 Debug Debug =>
+2020-04-10 22:46:42.7700 Debug Info =>
+2020-04-10 22:46:42.7846 Debug Warn => file
+2020-04-10 22:46:42.7846 Debug Error => file
+2020-04-10 22:46:42.7846 Debug Fatal => file
+2020-04-10 22:46:42.8146 Debug Targets for OrchardCore.Environment.Extensions.Features.FeaturesProvider by level:
+2020-04-10 22:46:42.8162 Debug Trace =>
+2020-04-10 22:46:42.8162 Debug Debug =>
+2020-04-10 22:46:42.8162 Debug Info =>
+2020-04-10 22:46:42.8162 Debug Warn => file
+2020-04-10 22:46:42.8162 Debug Error => file
+2020-04-10 22:46:42.8162 Debug Fatal => file
+2020-04-10 22:46:42.8162 Debug Targets for OrchardCore.Environment.Extensions.ExtensionManager by level:
+2020-04-10 22:46:42.8162 Debug Trace =>
+2020-04-10 22:46:42.8162 Debug Debug =>
+2020-04-10 22:46:42.8162 Debug Info =>
+2020-04-10 22:46:42.8162 Debug Warn => file
+2020-04-10 22:46:42.8162 Debug Error => file
+2020-04-10 22:46:42.8162 Debug Fatal => file
+2020-04-10 22:46:42.8585 Debug Targets for OrchardCore.Environment.Shell.Builders.CompositionStrategy by level:
+2020-04-10 22:46:42.8585 Debug Trace =>
+2020-04-10 22:46:42.8585 Debug Debug =>
+2020-04-10 22:46:42.8585 Debug Info =>
+2020-04-10 22:46:42.8585 Debug Warn => file
+2020-04-10 22:46:42.8585 Debug Error => file
+2020-04-10 22:46:42.8585 Debug Fatal => file
+2020-04-10 22:46:42.8631 Debug Targets for OrchardCore.Environment.Shell.Builders.ShellContextFactory by level:
+2020-04-10 22:46:42.8631 Debug Trace =>
+2020-04-10 22:46:42.8631 Debug Debug =>
+2020-04-10 22:46:42.8631 Debug Info =>
+2020-04-10 22:46:42.8631 Debug Warn => file
+2020-04-10 22:46:42.8631 Debug Error => file
+2020-04-10 22:46:42.8631 Debug Fatal => file
+2020-04-10 22:46:42.8631 Debug Targets for OrchardCore.Environment.Shell.ShellHost by level:
+2020-04-10 22:46:42.8631 Debug Trace =>
+2020-04-10 22:46:42.8631 Debug Debug =>
+2020-04-10 22:46:42.8631 Debug Info =>
+2020-04-10 22:46:42.8631 Debug Warn => file
+2020-04-10 22:46:42.8631 Debug Error => file
+2020-04-10 22:46:42.8631 Debug Fatal => file
+2020-04-10 22:46:42.8814 Debug Targets for OrchardCore.Modules.ModularBackgroundService by level:
+2020-04-10 22:46:42.8814 Debug Trace =>
+2020-04-10 22:46:42.8814 Debug Debug =>
+2020-04-10 22:46:42.8814 Debug Info =>
+2020-04-10 22:46:42.8814 Debug Warn => file
+2020-04-10 22:46:42.8814 Debug Error => file
+2020-04-10 22:46:42.8814 Debug Fatal => file
+2020-04-10 22:46:42.9902 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets by level:
+2020-04-10 22:46:42.9902 Debug Trace =>
+2020-04-10 22:46:42.9902 Debug Debug =>
+2020-04-10 22:46:42.9902 Debug Info =>
+2020-04-10 22:46:42.9902 Debug Warn => file
+2020-04-10 22:46:42.9902 Debug Error => file
+2020-04-10 22:46:42.9902 Debug Fatal => file
+2020-04-10 22:46:43.1044 Debug Targets for Microsoft.AspNetCore.Server.Kestrel by level:
+2020-04-10 22:46:43.1044 Debug Trace =>
+2020-04-10 22:46:43.1044 Debug Debug =>
+2020-04-10 22:46:43.1044 Debug Info =>
+2020-04-10 22:46:43.1044 Debug Warn => file
+2020-04-10 22:46:43.1044 Debug Error => file
+2020-04-10 22:46:43.1044 Debug Fatal => file
+2020-04-10 22:46:43.1151 Debug Targets for Microsoft.AspNetCore.Hosting.Diagnostics by level:
+2020-04-10 22:46:43.1151 Debug Trace =>
+2020-04-10 22:46:43.1151 Debug Debug =>
+2020-04-10 22:46:43.1151 Debug Info =>
+2020-04-10 22:46:43.1151 Debug Warn => file
+2020-04-10 22:46:43.1151 Debug Error => file
+2020-04-10 22:46:43.1151 Debug Fatal => file
+2020-04-10 22:46:44.3185 Debug Targets for Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor by level:
+2020-04-10 22:46:44.3185 Debug Trace =>
+2020-04-10 22:46:44.3185 Debug Debug =>
+2020-04-10 22:46:44.3185 Debug Info =>
+2020-04-10 22:46:44.3185 Debug Warn => file
+2020-04-10 22:46:44.3185 Debug Error => file
+2020-04-10 22:46:44.3185 Debug Fatal => file
+2020-04-10 22:46:44.9200 Debug Targets for OrchardCore.Modules.ModularTenantRouterMiddleware by level:
+2020-04-10 22:46:44.9200 Debug Trace =>
+2020-04-10 22:46:44.9200 Debug Debug =>
+2020-04-10 22:46:44.9200 Debug Info =>
+2020-04-10 22:46:44.9200 Debug Warn => file
+2020-04-10 22:46:44.9200 Debug Error => file
+2020-04-10 22:46:44.9200 Debug Fatal => file
+2020-04-10 22:46:44.9736 Debug Targets for Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware by level:
+2020-04-10 22:46:44.9736 Debug Trace =>
+2020-04-10 22:46:44.9736 Debug Debug =>
+2020-04-10 22:46:44.9736 Debug Info =>
+2020-04-10 22:46:44.9736 Debug Warn => file
+2020-04-10 22:46:44.9736 Debug Error => file
+2020-04-10 22:46:44.9736 Debug Fatal => file
+2020-04-10 22:46:44.9736 Debug Targets for Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware by level:
+2020-04-10 22:46:44.9736 Debug Trace =>
+2020-04-10 22:46:44.9736 Debug Debug =>
+2020-04-10 22:46:44.9736 Debug Info =>
+2020-04-10 22:46:44.9736 Debug Warn => file
+2020-04-10 22:46:44.9736 Debug Error => file
+2020-04-10 22:46:44.9736 Debug Fatal => file
+2020-04-10 22:46:45.0058 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer by level:
+2020-04-10 22:46:45.0058 Debug Trace =>
+2020-04-10 22:46:45.0058 Debug Debug =>
+2020-04-10 22:46:45.0058 Debug Info =>
+2020-04-10 22:46:45.0058 Debug Warn => file
+2020-04-10 22:46:45.0058 Debug Error => file
+2020-04-10 22:46:45.0058 Debug Fatal => file
+2020-04-10 22:46:47.0316 Debug Targets for Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware by level:
+2020-04-10 22:46:47.0316 Debug Trace =>
+2020-04-10 22:46:47.0316 Debug Debug =>
+2020-04-10 22:46:47.0316 Debug Info =>
+2020-04-10 22:46:47.0340 Debug Warn => file
+2020-04-10 22:46:47.0340 Debug Error => file
+2020-04-10 22:46:47.0340 Debug Fatal => file
+2020-04-10 22:47:17.1460 Debug Targets for Microsoft.AspNetCore.Routing.DefaultLinkGenerator by level:
+2020-04-10 22:47:17.1460 Debug Trace =>
+2020-04-10 22:47:17.1460 Debug Debug =>
+2020-04-10 22:47:17.1460 Debug Info =>
+2020-04-10 22:47:17.1460 Debug Warn => file
+2020-04-10 22:47:17.1460 Debug Error => file
+2020-04-10 22:47:17.1460 Debug Fatal => file
+2020-04-10 22:47:17.1642 Debug Targets for Microsoft.AspNetCore.Routing.DefaultLinkParser by level:
+2020-04-10 22:47:17.1642 Debug Trace =>
+2020-04-10 22:47:17.1642 Debug Debug =>
+2020-04-10 22:47:17.1642 Debug Info =>
+2020-04-10 22:47:17.1642 Debug Warn => file
+2020-04-10 22:47:17.1642 Debug Error => file
+2020-04-10 22:47:17.1642 Debug Fatal => file
+2020-04-10 22:47:17.2295 Debug Targets for Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector by level:
+2020-04-10 22:47:17.2295 Debug Trace =>
+2020-04-10 22:47:17.2295 Debug Debug =>
+2020-04-10 22:47:17.2295 Debug Info =>
+2020-04-10 22:47:17.2295 Debug Warn => file
+2020-04-10 22:47:17.2295 Debug Error => file
+2020-04-10 22:47:17.2295 Debug Fatal => file
+2020-04-10 22:47:25.1475 Debug Targets for OrchardCore.Environment.Shell.ShellStateManager by level:
+2020-04-10 22:47:25.1475 Debug Trace =>
+2020-04-10 22:47:25.1475 Debug Debug =>
+2020-04-10 22:47:25.1475 Debug Info =>
+2020-04-10 22:47:25.1475 Debug Warn => file
+2020-04-10 22:47:25.1475 Debug Error => file
+2020-04-10 22:47:25.1475 Debug Fatal => file
+2020-04-10 22:47:25.1475 Debug Targets for OrchardCore.Environment.Shell.ShellStateCoordinator by level:
+2020-04-10 22:47:25.1475 Debug Trace =>
+2020-04-10 22:47:25.1475 Debug Debug =>
+2020-04-10 22:47:25.1475 Debug Info =>
+2020-04-10 22:47:25.1475 Debug Warn => file
+2020-04-10 22:47:25.1617 Debug Error => file
+2020-04-10 22:47:25.1617 Debug Fatal => file
+2020-04-10 22:47:25.1617 Debug Targets for OrchardCore.Environment.Shell.Data.Descriptors.ShellDescriptorManager by level:
+2020-04-10 22:47:25.1617 Debug Trace =>
+2020-04-10 22:47:25.1617 Debug Debug =>
+2020-04-10 22:47:25.1617 Debug Info =>
+2020-04-10 22:47:25.1617 Debug Warn => file
+2020-04-10 22:47:25.1617 Debug Error => file
+2020-04-10 22:47:25.1617 Debug Fatal => file
+2020-04-10 22:47:28.1928 Debug Targets for OrchardCore.Data.Migration.AutomaticDataMigrations by level:
+2020-04-10 22:47:28.1928 Debug Trace =>
+2020-04-10 22:47:28.1928 Debug Debug =>
+2020-04-10 22:47:28.1928 Debug Info =>
+2020-04-10 22:47:28.1928 Debug Warn => file
+2020-04-10 22:47:28.1928 Debug Error => file
+2020-04-10 22:47:28.1928 Debug Fatal => file
+2020-04-10 22:47:28.3557 Debug Targets for OrchardCore.Media.Services.AttachedMediaFieldFileService by level:
+2020-04-10 22:47:28.3557 Debug Trace =>
+2020-04-10 22:47:28.3557 Debug Debug =>
+2020-04-10 22:47:28.3557 Debug Info =>
+2020-04-10 22:47:28.3557 Debug Warn => file
+2020-04-10 22:47:28.3557 Debug Error => file
+2020-04-10 22:47:28.3557 Debug Fatal => file
+2020-04-10 22:47:28.3557 Debug Targets for OrchardCore.Media.Services.TempDirCleanerService by level:
+2020-04-10 22:47:28.3557 Debug Trace =>
+2020-04-10 22:47:28.3557 Debug Debug =>
+2020-04-10 22:47:28.3557 Debug Info =>
+2020-04-10 22:47:28.3557 Debug Warn => file
+2020-04-10 22:47:28.3557 Debug Error => file
+2020-04-10 22:47:28.3623 Debug Fatal => file
+2020-04-10 22:47:28.3963 Debug Targets for Microsoft.Extensions.Caching.Memory.MemoryCache by level:
+2020-04-10 22:47:28.3963 Debug Trace =>
+2020-04-10 22:47:28.3963 Debug Debug =>
+2020-04-10 22:47:28.3963 Debug Info =>
+2020-04-10 22:47:28.3963 Debug Warn => file
+2020-04-10 22:47:28.3963 Debug Error => file
+2020-04-10 22:47:28.3963 Debug Fatal => file
+2020-04-10 22:47:28.4508 Debug Targets for OrchardCore.Html.Migrations by level:
+2020-04-10 22:47:28.4508 Debug Trace =>
+2020-04-10 22:47:28.4508 Debug Debug =>
+2020-04-10 22:47:28.4508 Debug Info =>
+2020-04-10 22:47:28.4508 Debug Warn => file
+2020-04-10 22:47:28.4508 Debug Error => file
+2020-04-10 22:47:28.4508 Debug Fatal => file
+2020-04-10 22:47:28.4508 Debug Targets for OrchardCore.Title.Migrations by level:
+2020-04-10 22:47:28.4563 Debug Trace =>
+2020-04-10 22:47:28.4563 Debug Debug =>
+2020-04-10 22:47:28.4563 Debug Info =>
+2020-04-10 22:47:28.4563 Debug Warn => file
+2020-04-10 22:47:28.4563 Debug Error => file
+2020-04-10 22:47:28.4563 Debug Fatal => file
+2020-04-10 22:47:28.4563 Debug Targets for OrchardCore.Recipes.Services.RecipeExecutor by level:
+2020-04-10 22:47:28.4563 Debug Trace =>
+2020-04-10 22:47:28.4563 Debug Debug =>
+2020-04-10 22:47:28.4563 Debug Info =>
+2020-04-10 22:47:28.4563 Debug Warn => file
+2020-04-10 22:47:28.4563 Debug Error => file
+2020-04-10 22:47:28.4563 Debug Fatal => file
+2020-04-10 22:47:28.4563 Debug Targets for OrchardCore.Data.Migration.DataMigrationManager by level:
+2020-04-10 22:47:28.4563 Debug Trace =>
+2020-04-10 22:47:28.4563 Debug Debug =>
+2020-04-10 22:47:28.4563 Debug Info =>
+2020-04-10 22:47:28.4563 Debug Warn => file
+2020-04-10 22:47:28.4563 Debug Error => file
+2020-04-10 22:47:28.4563 Debug Fatal => file
+2020-04-10 22:47:28.7261 Debug Targets for Microsoft.AspNetCore.Mvc.MvcOptions by level:
+2020-04-10 22:47:28.7261 Debug Trace =>
+2020-04-10 22:47:28.7261 Debug Debug =>
+2020-04-10 22:47:28.7261 Debug Info =>
+2020-04-10 22:47:28.7261 Debug Warn => file
+2020-04-10 22:47:28.7261 Debug Error => file
+2020-04-10 22:47:28.7261 Debug Fatal => file
+2020-04-10 22:47:28.7770 Debug Targets for Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter by level:
+2020-04-10 22:47:28.7770 Debug Trace =>
+2020-04-10 22:47:28.7770 Debug Debug =>
+2020-04-10 22:47:28.7770 Debug Info =>
+2020-04-10 22:47:28.7770 Debug Warn => file
+2020-04-10 22:47:28.7770 Debug Error => file
+2020-04-10 22:47:28.7770 Debug Fatal => file
+2020-04-10 22:47:28.8669 Debug Targets for Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter by level:
+2020-04-10 22:47:28.8669 Debug Trace =>
+2020-04-10 22:47:28.8669 Debug Debug =>
+2020-04-10 22:47:28.8669 Debug Info =>
+2020-04-10 22:47:28.8669 Debug Warn => file
+2020-04-10 22:47:28.8669 Debug Error => file
+2020-04-10 22:47:28.8669 Debug Fatal => file
+2020-04-10 22:47:28.8900 Debug Targets for Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter by level:
+2020-04-10 22:47:28.8900 Debug Trace =>
+2020-04-10 22:47:28.8900 Debug Debug =>
+2020-04-10 22:47:28.8900 Debug Info =>
+2020-04-10 22:47:28.8900 Debug Warn => file
+2020-04-10 22:47:28.8900 Debug Error => file
+2020-04-10 22:47:28.8900 Debug Fatal => file
+2020-04-10 22:47:28.9535 Debug Targets for Microsoft.AspNetCore.Mvc.ApplicationModels.CompiledPageRouteModelProvider by level:
+2020-04-10 22:47:28.9535 Debug Trace =>
+2020-04-10 22:47:28.9535 Debug Debug =>
+2020-04-10 22:47:28.9562 Debug Info =>
+2020-04-10 22:47:28.9562 Debug Warn => file
+2020-04-10 22:47:28.9562 Debug Error => file
+2020-04-10 22:47:28.9562 Debug Fatal => file
+2020-04-10 22:47:33.9077 Debug Targets for OrchardCore.Scripting.Providers.LogProvider by level:
+2020-04-10 22:47:33.9077 Debug Trace =>
+2020-04-10 22:47:33.9097 Debug Debug =>
+2020-04-10 22:47:33.9097 Debug Info =>
+2020-04-10 22:47:33.9097 Debug Warn => file
+2020-04-10 22:47:33.9097 Debug Error => file
+2020-04-10 22:47:33.9097 Debug Fatal => file
+2020-04-10 22:47:34.2131 Debug Targets for Microsoft.AspNetCore.Routing.EndpointMiddleware by level:
+2020-04-10 22:47:34.2131 Debug Trace =>
+2020-04-10 22:47:34.2131 Debug Debug =>
+2020-04-10 22:47:34.2131 Debug Info =>
+2020-04-10 22:47:34.2131 Debug Warn => file
+2020-04-10 22:47:34.2131 Debug Error => file
+2020-04-10 22:47:34.2131 Debug Fatal => file
+2020-04-10 22:47:34.2131 Debug Targets for Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware by level:
+2020-04-10 22:47:34.2131 Debug Trace =>
+2020-04-10 22:47:34.2131 Debug Debug =>
+2020-04-10 22:47:34.2221 Debug Info =>
+2020-04-10 22:47:34.2221 Debug Warn => file
+2020-04-10 22:47:34.2221 Debug Error => file
+2020-04-10 22:47:34.2221 Debug Fatal => file
+2020-04-10 22:47:34.4404 Debug Targets for SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware by level:
+2020-04-10 22:47:34.4410 Debug Trace =>
+2020-04-10 22:47:34.4410 Debug Debug =>
+2020-04-10 22:47:34.4410 Debug Info =>
+2020-04-10 22:47:34.4410 Debug Warn => file
+2020-04-10 22:47:34.4410 Debug Error => file
+2020-04-10 22:47:34.4410 Debug Fatal => file
+2020-04-10 22:47:34.4672 Debug Targets for Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware by level:
+2020-04-10 22:47:34.4672 Debug Trace =>
+2020-04-10 22:47:34.4672 Debug Debug =>
+2020-04-10 22:47:34.4672 Debug Info =>
+2020-04-10 22:47:34.4672 Debug Warn => file
+2020-04-10 22:47:34.4672 Debug Error => file
+2020-04-10 22:47:34.4672 Debug Fatal => file
+2020-04-10 22:47:34.5692 Debug Targets for Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler by level:
+2020-04-10 22:47:34.5692 Debug Trace =>
+2020-04-10 22:47:34.5692 Debug Debug =>
+2020-04-10 22:47:34.5692 Debug Info =>
+2020-04-10 22:47:34.5692 Debug Warn => file
+2020-04-10 22:47:34.5692 Debug Error => file
+2020-04-10 22:47:34.5692 Debug Fatal => file
+2020-04-10 22:47:34.7646 Debug Targets for Microsoft.AspNetCore.Routing.Matching.DfaMatcher by level:
+2020-04-10 22:47:34.7646 Debug Trace =>
+2020-04-10 22:47:34.7646 Debug Debug =>
+2020-04-10 22:47:34.7646 Debug Info =>
+2020-04-10 22:47:34.7646 Debug Warn => file
+2020-04-10 22:47:34.7646 Debug Error => file
+2020-04-10 22:47:34.7646 Debug Fatal => file
+2020-04-10 22:47:35.1008 Debug Targets for Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler by level:
+2020-04-10 22:47:35.1008 Debug Trace =>
+2020-04-10 22:47:35.1008 Debug Debug =>
+2020-04-10 22:47:35.1008 Debug Info =>
+2020-04-10 22:47:35.1008 Debug Warn => file
+2020-04-10 22:47:35.1008 Debug Error => file
+2020-04-10 22:47:35.1008 Debug Fatal => file
+2020-04-10 22:47:35.2560 Debug Targets for OrchardCore.Roles.Services.RoleStore by level:
+2020-04-10 22:47:35.2560 Debug Trace =>
+2020-04-10 22:47:35.2560 Debug Debug =>
+2020-04-10 22:47:35.2560 Debug Info =>
+2020-04-10 22:47:35.2560 Debug Warn => file
+2020-04-10 22:47:35.2560 Debug Error => file
+2020-04-10 22:47:35.2560 Debug Fatal => file
+2020-04-10 22:47:35.2741 Debug Targets for Microsoft.AspNetCore.Identity.RoleManager by level:
+2020-04-10 22:47:35.2741 Debug Trace =>
+2020-04-10 22:47:35.2741 Debug Debug =>
+2020-04-10 22:47:35.2741 Debug Info =>
+2020-04-10 22:47:35.2741 Debug Warn => file
+2020-04-10 22:47:35.2741 Debug Error => file
+2020-04-10 22:47:35.2741 Debug Fatal => file
+2020-04-10 22:47:35.2741 Debug Targets for OrchardCore.Users.Services.UserStore by level:
+2020-04-10 22:47:35.2741 Debug Trace =>
+2020-04-10 22:47:35.2741 Debug Debug =>
+2020-04-10 22:47:35.2741 Debug Info =>
+2020-04-10 22:47:35.2741 Debug Warn => file
+2020-04-10 22:47:35.2741 Debug Error => file
+2020-04-10 22:47:35.2741 Debug Fatal => file
+2020-04-10 22:47:35.2897 Debug Targets for Microsoft.AspNetCore.Identity.UserManager by level:
+2020-04-10 22:47:35.2897 Debug Trace =>
+2020-04-10 22:47:35.2897 Debug Debug =>
+2020-04-10 22:47:35.2897 Debug Info =>
+2020-04-10 22:47:35.2897 Debug Warn => file
+2020-04-10 22:47:35.2897 Debug Error => file
+2020-04-10 22:47:35.2897 Debug Fatal => file
+2020-04-10 22:47:35.3089 Debug Targets for Microsoft.AspNetCore.Identity.DataProtectorTokenProvider by level:
+2020-04-10 22:47:35.3089 Debug Trace =>
+2020-04-10 22:47:35.3089 Debug Debug =>
+2020-04-10 22:47:35.3089 Debug Info =>
+2020-04-10 22:47:35.3089 Debug Warn => file
+2020-04-10 22:47:35.3089 Debug Error => file
+2020-04-10 22:47:35.3089 Debug Fatal => file
+2020-04-10 22:47:35.3089 Debug Targets for Microsoft.AspNetCore.Identity.SignInManager by level:
+2020-04-10 22:47:35.3089 Debug Trace =>
+2020-04-10 22:47:35.3089 Debug Debug =>
+2020-04-10 22:47:35.3089 Debug Info =>
+2020-04-10 22:47:35.3089 Debug Warn => file
+2020-04-10 22:47:35.3154 Debug Error => file
+2020-04-10 22:47:35.3154 Debug Fatal => file
+2020-04-10 22:47:35.3154 Debug Targets for Microsoft.AspNetCore.Identity.SecurityStampValidator`1[[OrchardCore.Users.IUser, OrchardCore.Users.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] by level:
+2020-04-10 22:47:35.3154 Debug Trace =>
+2020-04-10 22:47:35.3154 Debug Debug =>
+2020-04-10 22:47:35.3154 Debug Info =>
+2020-04-10 22:47:35.3154 Debug Warn => file
+2020-04-10 22:47:35.3154 Debug Error => file
+2020-04-10 22:47:35.3154 Debug Fatal => file
+2020-04-10 22:47:36.2359 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory by level:
+2020-04-10 22:47:36.2359 Debug Trace =>
+2020-04-10 22:47:36.2359 Debug Debug =>
+2020-04-10 22:47:36.2382 Debug Info =>
+2020-04-10 22:47:36.2382 Debug Warn => file
+2020-04-10 22:47:36.2382 Debug Error => file
+2020-04-10 22:47:36.2382 Debug Fatal => file
+2020-04-10 22:47:36.2747 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder by level:
+2020-04-10 22:47:36.2747 Debug Trace =>
+2020-04-10 22:47:36.2747 Debug Debug =>
+2020-04-10 22:47:36.2747 Debug Info =>
+2020-04-10 22:47:36.2747 Debug Warn => file
+2020-04-10 22:47:36.2747 Debug Error => file
+2020-04-10 22:47:36.2747 Debug Fatal => file
+2020-04-10 22:47:36.2747 Debug Targets for Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker by level:
+2020-04-10 22:47:36.2981 Debug Trace =>
+2020-04-10 22:47:36.2981 Debug Debug =>
+2020-04-10 22:47:36.2999 Debug Info =>
+2020-04-10 22:47:36.2999 Debug Warn => file
+2020-04-10 22:47:36.2999 Debug Error => file
+2020-04-10 22:47:36.2999 Debug Fatal => file
+2020-04-10 22:47:36.2999 Debug Targets for Microsoft.AspNetCore.Mvc.ViewFeatures.CookieTempDataProvider by level:
+2020-04-10 22:47:36.2999 Debug Trace =>
+2020-04-10 22:47:36.2999 Debug Debug =>
+2020-04-10 22:47:36.2999 Debug Info =>
+2020-04-10 22:47:36.2999 Debug Warn => file
+2020-04-10 22:47:36.2999 Debug Error => file
+2020-04-10 22:47:36.2999 Debug Fatal => file
+2020-04-10 22:47:36.3241 Debug Targets for Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine by level:
+2020-04-10 22:47:36.3241 Debug Trace =>
+2020-04-10 22:47:36.3241 Debug Debug =>
+2020-04-10 22:47:36.3241 Debug Info =>
+2020-04-10 22:47:36.3241 Debug Warn => file
+2020-04-10 22:47:36.3241 Debug Error => file
+2020-04-10 22:47:36.3241 Debug Fatal => file
+2020-04-10 22:47:36.3241 Debug Targets for Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker by level:
+2020-04-10 22:47:36.3241 Debug Trace =>
+2020-04-10 22:47:36.3241 Debug Debug =>
+2020-04-10 22:47:36.3241 Debug Info =>
+2020-04-10 22:47:36.3323 Debug Warn => file
+2020-04-10 22:47:36.3323 Debug Error => file
+2020-04-10 22:47:36.3323 Debug Fatal => file
+2020-04-10 22:47:36.3943 Debug Targets for OrchardCore.DisplayManagement.Notify.Notifier by level:
+2020-04-10 22:47:36.3943 Debug Trace =>
+2020-04-10 22:47:36.3943 Debug Debug =>
+2020-04-10 22:47:36.3943 Debug Info =>
+2020-04-10 22:47:36.3943 Debug Warn => file
+2020-04-10 22:47:36.3943 Debug Error => file
+2020-04-10 22:47:36.3943 Debug Fatal => file
+2020-04-10 22:47:36.4195 Debug Targets for OrchardCore.Environment.Shell.ShellFeaturesManager by level:
+2020-04-10 22:47:36.4195 Debug Trace =>
+2020-04-10 22:47:36.4195 Debug Debug =>
+2020-04-10 22:47:36.4195 Debug Info =>
+2020-04-10 22:47:36.4195 Debug Warn => file
+2020-04-10 22:47:36.4195 Debug Error => file
+2020-04-10 22:47:36.4195 Debug Fatal => file
+2020-04-10 22:47:36.4195 Debug Targets for OrchardCore.DisplayManagement.Descriptors.ShapePlacementStrategy.ShapePlacementParsingStrategy by level:
+2020-04-10 22:47:36.4248 Debug Trace =>
+2020-04-10 22:47:36.4248 Debug Debug =>
+2020-04-10 22:47:36.4248 Debug Info =>
+2020-04-10 22:47:36.4248 Debug Warn => file
+2020-04-10 22:47:36.4248 Debug Error => file
+2020-04-10 22:47:36.4248 Debug Fatal => file
+2020-04-10 22:47:36.4248 Debug Targets for OrchardCore.DisplayManagement.Descriptors.DefaultShapeTableManager by level:
+2020-04-10 22:47:36.4248 Debug Trace =>
+2020-04-10 22:47:36.4248 Debug Debug =>
+2020-04-10 22:47:36.4248 Debug Info =>
+2020-04-10 22:47:36.4248 Debug Warn => file
+2020-04-10 22:47:36.4248 Debug Error => file
+2020-04-10 22:47:36.4248 Debug Fatal => file
+2020-04-10 22:47:36.4461 Debug Targets for OrchardCore.DisplayManagement.Notify.NotifyFilter by level:
+2020-04-10 22:47:36.4461 Debug Trace =>
+2020-04-10 22:47:36.4461 Debug Debug =>
+2020-04-10 22:47:36.4461 Debug Info =>
+2020-04-10 22:47:36.4461 Debug Warn => file
+2020-04-10 22:47:36.4461 Debug Error => file
+2020-04-10 22:47:36.4461 Debug Fatal => file
+2020-04-10 22:47:36.4461 Debug Targets for Microsoft.AspNetCore.Authorization.DefaultAuthorizationService by level:
+2020-04-10 22:47:36.4461 Debug Trace =>
+2020-04-10 22:47:36.4461 Debug Debug =>
+2020-04-10 22:47:36.4461 Debug Info =>
+2020-04-10 22:47:36.4461 Debug Warn => file
+2020-04-10 22:47:36.4461 Debug Error => file
+2020-04-10 22:47:36.4461 Debug Fatal => file
+2020-04-10 22:47:36.4656 Debug Targets for OrchardCore.AdminMenu.AdminNodes.PlaceholderAdminNodeNavigationBuilder by level:
+2020-04-10 22:47:36.4656 Debug Trace =>
+2020-04-10 22:47:36.4656 Debug Debug =>
+2020-04-10 22:47:36.4656 Debug Info =>
+2020-04-10 22:47:36.4656 Debug Warn => file
+2020-04-10 22:47:36.4656 Debug Error => file
+2020-04-10 22:47:36.4656 Debug Fatal => file
+2020-04-10 22:47:36.4851 Debug Targets for OrchardCore.AdminMenu.AdminNodes.LinkAdminNodeNavigationBuilder by level:
+2020-04-10 22:47:36.4851 Debug Trace =>
+2020-04-10 22:47:36.4851 Debug Debug =>
+2020-04-10 22:47:36.4851 Debug Info =>
+2020-04-10 22:47:36.4851 Debug Warn => file
+2020-04-10 22:47:36.4851 Debug Error => file
+2020-04-10 22:47:36.4878 Debug Fatal => file
+2020-04-10 22:47:36.4878 Debug Targets for OrchardCore.Contents.AdminNodes.ContentTypesAdminNodeNavigationBuilder by level:
+2020-04-10 22:47:36.4878 Debug Trace =>
+2020-04-10 22:47:36.4878 Debug Debug =>
+2020-04-10 22:47:36.4878 Debug Info =>
+2020-04-10 22:47:36.4878 Debug Warn => file
+2020-04-10 22:47:36.4878 Debug Error => file
+2020-04-10 22:47:36.4878 Debug Fatal => file
+2020-04-10 22:47:36.5490 Debug Targets for OrchardCore.Environment.Cache.DefaultTagCache by level:
+2020-04-10 22:47:36.5490 Debug Trace =>
+2020-04-10 22:47:36.5500 Debug Debug =>
+2020-04-10 22:47:36.5500 Debug Info =>
+2020-04-10 22:47:36.5500 Debug Warn => file
+2020-04-10 22:47:36.5500 Debug Error => file
+2020-04-10 22:47:36.5500 Debug Fatal => file
+2020-04-10 22:47:36.5500 Debug Targets for OrchardCore.ContentManagement.Drivers.Coordinators.ContentPartHandlerCoordinator by level:
+2020-04-10 22:47:36.5500 Debug Trace =>
+2020-04-10 22:47:36.5661 Debug Debug =>
+2020-04-10 22:47:36.5661 Debug Info =>
+2020-04-10 22:47:36.5661 Debug Warn => file
+2020-04-10 22:47:36.5661 Debug Error => file
+2020-04-10 22:47:36.5661 Debug Fatal => file
+2020-04-10 22:47:36.5661 Debug Targets for OrchardCore.Indexing.Services.IndexingTaskManager by level:
+2020-04-10 22:47:36.5661 Debug Trace =>
+2020-04-10 22:47:36.5661 Debug Debug =>
+2020-04-10 22:47:36.5661 Debug Info =>
+2020-04-10 22:47:36.5661 Debug Warn => file
+2020-04-10 22:47:36.5661 Debug Error => file
+2020-04-10 22:47:36.5661 Debug Fatal => file
+2020-04-10 22:47:36.5826 Debug Targets for OrchardCore.Lucene.LuceneIndexManager by level:
+2020-04-10 22:47:36.5826 Debug Trace =>
+2020-04-10 22:47:36.5826 Debug Debug =>
+2020-04-10 22:47:36.5826 Debug Info =>
+2020-04-10 22:47:36.5826 Debug Warn => file
+2020-04-10 22:47:36.5826 Debug Error => file
+2020-04-10 22:47:36.5826 Debug Fatal => file
+2020-04-10 22:47:36.8650 Debug Targets for OrchardCore.Lucene.Handlers.LuceneIndexingContentHandler by level:
+2020-04-10 22:47:36.8650 Debug Trace =>
+2020-04-10 22:47:36.8650 Debug Debug =>
+2020-04-10 22:47:36.8650 Debug Info =>
+2020-04-10 22:47:36.8650 Debug Warn => file
+2020-04-10 22:47:36.8650 Debug Error => file
+2020-04-10 22:47:36.8650 Debug Fatal => file
+2020-04-10 22:47:36.8650 Debug Targets for OrchardCore.ContentManagement.DefaultContentManager by level:
+2020-04-10 22:47:36.8650 Debug Trace =>
+2020-04-10 22:47:36.8650 Debug Debug =>
+2020-04-10 22:47:36.8650 Debug Info =>
+2020-04-10 22:47:36.8650 Debug Warn => file
+2020-04-10 22:47:36.8650 Debug Error => file
+2020-04-10 22:47:36.8650 Debug Fatal => file
+2020-04-10 22:47:36.8804 Debug Targets for OrchardCore.Lists.AdminNodes.ListsAdminNodeNavigationBuilder by level:
+2020-04-10 22:47:36.8804 Debug Trace =>
+2020-04-10 22:47:36.8804 Debug Debug =>
+2020-04-10 22:47:36.8804 Debug Info =>
+2020-04-10 22:47:36.8804 Debug Warn => file
+2020-04-10 22:47:36.8804 Debug Error => file
+2020-04-10 22:47:36.8804 Debug Fatal => file
+2020-04-10 22:47:36.8804 Debug Targets for OrchardCore.AdminMenu.Services.AdminMenuNavigationProvidersCoordinator by level:
+2020-04-10 22:47:36.8804 Debug Trace =>
+2020-04-10 22:47:36.8804 Debug Debug =>
+2020-04-10 22:47:36.8804 Debug Info =>
+2020-04-10 22:47:36.8804 Debug Warn => file
+2020-04-10 22:47:36.8804 Debug Error => file
+2020-04-10 22:47:36.8804 Debug Fatal => file
+2020-04-10 22:47:36.8952 Debug Targets for OrchardCore.Navigation.NavigationManager by level:
+2020-04-10 22:47:36.8952 Debug Trace =>
+2020-04-10 22:47:36.8952 Debug Debug =>
+2020-04-10 22:47:36.8952 Debug Info =>
+2020-04-10 22:47:36.8952 Debug Warn => file
+2020-04-10 22:47:36.8952 Debug Error => file
+2020-04-10 22:47:36.8952 Debug Fatal => file
+2020-04-10 22:47:36.9318 Debug Targets for OrchardCore.ContentManagement.Display.ContentItemDisplayCoordinator by level:
+2020-04-10 22:47:36.9318 Debug Trace =>
+2020-04-10 22:47:36.9318 Debug Debug =>
+2020-04-10 22:47:36.9318 Debug Info =>
+2020-04-10 22:47:36.9318 Debug Warn => file
+2020-04-10 22:47:36.9318 Debug Error => file
+2020-04-10 22:47:36.9318 Debug Fatal => file
+2020-04-10 22:47:36.9318 Debug Targets for OrchardCore.ContentManagement.Display.ContentItemDisplayManager by level:
+2020-04-10 22:47:36.9318 Debug Trace =>
+2020-04-10 22:47:36.9318 Debug Debug =>
+2020-04-10 22:47:36.9318 Debug Info =>
+2020-04-10 22:47:36.9318 Debug Warn => file
+2020-04-10 22:47:36.9318 Debug Error => file
+2020-04-10 22:47:36.9318 Debug Fatal => file
+2020-04-10 22:47:37.0210 Debug Targets for Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery by level:
+2020-04-10 22:47:37.0210 Debug Trace =>
+2020-04-10 22:47:37.0210 Debug Debug =>
+2020-04-10 22:47:37.0210 Debug Info =>
+2020-04-10 22:47:37.0210 Debug Warn => file
+2020-04-10 22:47:37.0210 Debug Error => file
+2020-04-10 22:47:37.0210 Debug Fatal => file
+2020-04-10 22:47:37.0210 Debug Targets for Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.AutoValidateAntiforgeryTokenAuthorizationFilter by level:
+2020-04-10 22:47:37.0210 Debug Trace =>
+2020-04-10 22:47:37.0210 Debug Debug =>
+2020-04-10 22:47:37.0210 Debug Info =>
+2020-04-10 22:47:37.0210 Debug Warn => file
+2020-04-10 22:47:37.0210 Debug Error => file
+2020-04-10 22:47:37.0210 Debug Fatal => file
+2020-04-10 22:47:37.4006 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder by level:
+2020-04-10 22:47:37.4006 Debug Trace =>
+2020-04-10 22:47:37.4006 Debug Debug =>
+2020-04-10 22:47:37.4006 Debug Info =>
+2020-04-10 22:47:37.4006 Debug Warn => file
+2020-04-10 22:47:37.4006 Debug Error => file
+2020-04-10 22:47:37.4006 Debug Fatal => file
+2020-04-10 22:47:40.1032 Debug Targets for Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder by level:
+2020-04-10 22:47:40.1032 Debug Trace =>
+2020-04-10 22:47:40.1236 Debug Debug =>
+2020-04-10 22:47:40.1236 Debug Info =>
+2020-04-10 22:47:40.1236 Debug Warn => file
+2020-04-10 22:47:40.1236 Debug Error => file
+2020-04-10 22:47:40.1236 Debug Fatal => file
+2020-04-10 22:47:40.6735 Debug Targets for OrchardCore.DisplayManagement.Implementation.DefaultHtmlDisplay by level:
+2020-04-10 22:47:40.6735 Debug Trace =>
+2020-04-10 22:47:40.6735 Debug Debug =>
+2020-04-10 22:47:40.6735 Debug Info =>
+2020-04-10 22:47:40.6756 Debug Warn => file
+2020-04-10 22:47:40.6756 Debug Error => file
+2020-04-10 22:47:40.6756 Debug Fatal => file
+2020-04-10 22:47:40.7474 Debug Targets for Microsoft.AspNetCore.Mvc.Routing.EndpointRoutingUrlHelper by level:
+2020-04-10 22:47:40.7474 Debug Trace =>
+2020-04-10 22:47:40.7474 Debug Debug =>
+2020-04-10 22:47:40.7474 Debug Info =>
+2020-04-10 22:47:40.7474 Debug Warn => file
+2020-04-10 22:47:40.7474 Debug Error => file
+2020-04-10 22:47:40.7474 Debug Fatal => file
+2020-04-10 22:47:40.8230 Debug Targets for OrchardCore.Lucene.LuceneIndexingService by level:
+2020-04-10 22:47:40.8230 Debug Trace =>
+2020-04-10 22:47:40.8230 Debug Debug =>
+2020-04-10 22:47:40.8230 Debug Info =>
+2020-04-10 22:47:40.8230 Debug Warn => file
+2020-04-10 22:47:40.8230 Debug Error => file
+2020-04-10 22:47:40.8230 Debug Fatal => file
+2020-04-10 22:47:41.7614 Debug Targets for Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor by level:
+2020-04-10 22:47:41.7614 Debug Trace =>
+2020-04-10 22:47:41.7614 Debug Debug =>
+2020-04-10 22:47:41.7614 Debug Info =>
+2020-04-10 22:47:41.7614 Debug Warn => file
+2020-04-10 22:47:41.7614 Debug Error => file
+2020-04-10 22:47:41.7614 Debug Fatal => file
+2020-04-10 22:47:42.0814 Debug Targets for Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker by level:
+2020-04-10 22:47:42.0814 Debug Trace =>
+2020-04-10 22:47:42.0814 Debug Debug =>
+2020-04-10 22:47:42.0814 Debug Info =>
+2020-04-10 22:47:42.0814 Debug Warn => file
+2020-04-10 22:47:42.0814 Debug Error => file
+2020-04-10 22:47:42.0814 Debug Fatal => file
+2020-04-10 22:48:20.3671 Debug Targets for Microsoft.AspNetCore.Mvc.Razor.TagHelpers.HeadTagHelper by level:
+2020-04-10 22:48:20.3671 Debug Trace =>
+2020-04-10 22:48:20.3671 Debug Debug =>
+2020-04-10 22:48:20.3671 Debug Info =>
+2020-04-10 22:48:20.3671 Debug Warn => file
+2020-04-10 22:48:20.3671 Debug Error => file
+2020-04-10 22:48:20.3671 Debug Fatal => file
+2020-04-10 22:48:20.4723 Debug Targets for Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper by level:
+2020-04-10 22:48:20.4728 Debug Trace =>
+2020-04-10 22:48:20.4728 Debug Debug =>
+2020-04-10 22:48:20.4728 Debug Info =>
+2020-04-10 22:48:20.4728 Debug Warn => file
+2020-04-10 22:48:20.4728 Debug Error => file
+2020-04-10 22:48:20.4728 Debug Fatal => file
